@@ -3,6 +3,8 @@ const stayLengths = () => {
 
   let pathname: string
 
+  const api = 'http://43.143.97.8:3000'
+
   let statistics: Array<{
     name: string,
     time: number
@@ -102,11 +104,11 @@ const stayLengths = () => {
     if (document.visibilityState === 'hidden') {
       dealData()
 
-      // postSync('http://127.0.0.1:3000/datas/addData', data).then((res) => {
+      // postSync(`${api}/datas/addData`, data).then((res) => {
       //   console.log(res, 111)
       // })
       console.log(statistics)
-      sendReport('http://127.0.0.1:3000/datas/addData', statistics)
+      sendReport(`${api}/datas/addData`, statistics)
     } else if (document.visibilityState === 'visible') { // 如果隐藏页面又显示算作重新开始计算
       timeStr = new Date().getTime()
       statistics = []

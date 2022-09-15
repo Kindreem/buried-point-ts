@@ -1,4 +1,4 @@
-export const stayLengths = () => {
+const stayLengths = () => {
   let timeStr: number
 
   let pathname: string
@@ -133,4 +133,8 @@ export const stayLengths = () => {
   window.addEventListener('hashchange', () => {
     dealData()
   })
+}
+
+export {
+  stayLengths
 }

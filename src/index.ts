@@ -3,7 +3,7 @@ const stayLengths = () => {
 
   let pathname: string
 
-  const api = 'http://43.143.97.8:3000'
+  const api = 'http://www.kindrem.cn'
 
   let statistics: Array<{
     name: string,

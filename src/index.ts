@@ -135,6 +135,15 @@ const stayLengths = () => {
   window.addEventListener('hashchange', () => {
     dealData()
   })
+
+  // 全局异常捕获
+  window.onerror = function(message, source, lineno, colno, error) {
+    console.info(`message: ${message}
+    source:  ${source}
+    lineno:  ${lineno}
+    colno:   ${colno}
+    error:   ${error}`)
+  }
 }
 
 export {
